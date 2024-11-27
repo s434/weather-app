@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.ico"/>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+            // Function to extract the city name from URL parameter
+            const getCityNameFromURL = () => {
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+           
+                return urlParams.get('city');
+    
+    
+            };
+    
+            // Set the value of the city input field with the received city name
+            const cityName = decodeURIComponent(getCityNameFromURL());
+            console.log(cityName)
+            document.querySelector(".city-input").value = cityName;
+    
+            // Trigger the click event of the search button to generate the weather details
+            document.querySelector(".search-btn").click();
+        });
+    </script>
+
+
+
+  
+   
+    <video autoplay muted loop id="myVideo">
+        <source src="" type="video/mp4">
+      </video>
+
+    <div class="card">
+        <div class="search">
+            <div class="example">
+                <input class="city-input" type="text" placeholder="Search.." name="search">
+                <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+        <div class="content">
+            <div class="weather">
+                <div class="left">
+                    <h1>_____</h1>
+                <h3>_____</h3>
+                <h1>_____</h1>
+                <h3>Wind: ___m/s</h3>
+                <h3>Humidity: ___%</h3>
+                </div>
+                <div class="right">
+                    
+                </div>
+                
+                
+            </div>
+            
+            
+            <div class="forecast-card">
+                <div class="day-forecast">
+                    <h2>DAILY FORECAST</h2>
+                    <ul class="weather-cards">
+                        <li class="card1">
+                            <h4>_____</h4>
+                            <h4>Temp: ____</h4>
+                            <h4>Wind: __</h4>
+                            <h4>Humidity: __</h4>
+
+
+                        </li>
+                        <li class="card1">
+                            <h4>_____</h4>
+                            <h4>Temp: ____</h4>
+                            <h4>Wind: __</h4>
+                            <h4>Humidity: __</h4>
+
+
+                        </li>
+                        <li class="card1">
+                            <h4>_____</h4>
+                            <h4>Temp: ____</h4>
+                            <h4>Wind: __</h4>
+                            <h4>Humidity: __</h4>
+
+
+                        </li>
+                        <li class="card1">
+                            <h4>_____</h4>
+                            <h4>Temp: ____</h4>
+                            <h4>Wind: __</h4>
+                            <h4>Humidity: __</h4>
+
+
+                        </li>
+                        <li class="card1">
+                            <h4>_____</h4>
+                            <h4>Temp: ____</h4>
+                            <h4>Wind: __</h4>
+                            <h4>Humidity: __</h4>
+
+
+                        </li>
+                    </ul>
+
+                   
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
