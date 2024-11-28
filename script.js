@@ -42,6 +42,7 @@ const getWeatherDetails= (cityName, lat, lon) =>{
         .then(data=>{
            
             const ForecastDays = [];
+            console.log(cityName)
             const fiveDaysForecast = data.list.filter(forecast =>{
                 const forecastDate = new Date(forecast.dt_txt).getDate();
                 if(!ForecastDays.includes(forecastDate)){
